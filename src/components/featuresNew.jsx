@@ -1,4 +1,3 @@
-// src/components/Features.js
 import React from "react";
 import car from "../assets/images/car.jpg";
 import car3 from "../assets/images/car3.jpg";
