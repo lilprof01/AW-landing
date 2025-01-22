@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img {
+  position: relative;
+  background-image: url(./assets/images/car2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: black;
+}
+
+.img-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  animation: appear 2.5s ease-in-out forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+.bounce{
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translatex(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translatex(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* Perspective container */
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.flip-card-front {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #ddd;
+}
+
+.flip-card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+@media (min-width: 768px) {
+  .bounce-up{
+    animation: bounce-up 2s ease-in-out infinite;
+  }
+  
+  @keyframes bounce-up {
+    0%, 100% {
+      transform: translateY(-5%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}
