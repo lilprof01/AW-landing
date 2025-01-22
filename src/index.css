@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* background image for hero section*/
 .img {
   position: relative;
   background-image: url(./assets/images/car2.jpg);
