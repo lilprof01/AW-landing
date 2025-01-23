@@ -28,7 +28,9 @@ function HeroSection() {
   return (
     <section style={{
       backgroundImage: bg,
-    }} className={`flex flex-col align-middle items-center justify-center h-screen mt-12 img text-white text-center py-20 bg-cover bg-center bg-fixed`}>
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+    }} className={`flex flex-col align-middle items-center justify-center h-screen mt-12 img text-white text-center py-20 bg-fixed`}>
       <div className="img-cover"></div>
       <h1 className="z-10 text-4xl md:text-6xl font-bold mb-6">
         Welcome to AutoWorld
