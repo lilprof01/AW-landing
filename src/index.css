@@ -5,11 +5,6 @@
 /* background image for hero section*/
 .img {
   position: relative;
-  /* background-image: url(./assets/images/car2.jpg); */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   transition: background-image 1s ease-in-out;
 }
 
