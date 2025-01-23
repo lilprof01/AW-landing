@@ -4,11 +4,12 @@
 
 .img {
   position: relative;
-  background-image: url(./assets/images/car2.jpg);
+  /* background-image: url(./assets/images/car2.jpg); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  transition: background-image 1s ease-in-out;
 }
 
 html{
@@ -19,6 +20,161 @@ body{
   background-color: black;
 }
 
+/* mobile nav animations */
+.bg{
+  background-color: rgba(255, 255, 255, 0.393);
+  backdrop-filter: blur(10px);
+}
+
+.toggle-nav{
+  display: flex;
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+@keyframes slideOut{
+  from{
+    /* transform: translateY(100%); */
+  }
+  to{
+    /* transform: translateY(0); */
+  }
+}
+
+.toggle-nav-off{
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(100%);
+    display: none;
+  }
+}
+
+/* hamburger animations */
+.burger1{
+  animation: down-rotate 0.3s ease-out forwards;
+}
+
+@keyframes down-rotate{
+  0%{
+    margin-bottom: 4px;
+  }
+  100%{
+    margin-bottom: -4px;
+    rotate: 45deg;
+    background-color: black;
+  }
+}
+
+.burger2{
+  animation: up-rotate 0.3s ease-out forwards;
+}
+
+@keyframes up-rotate{
+  0%{
+    margin-top: 4px;
+  }
+  100%{
+    margin-top: -4px;
+    rotate: -45deg;
+    background-color: black;
+  }
+}
+
+.burger-1{
+  animation: down-rotate-off 0.3s ease-out forwards;
+}
+
+@keyframes down-rotate-off{
+  0%{
+    margin-bottom: -4px;
+    rotate: 45deg;
+    background-color: black;
+  }
+  100%{
+    margin-bottom: 4px;
+  }
+}
+
+.burger-2{
+  animation: up-rotate-off 0.3s ease-out forwards;
+}
+
+@keyframes up-rotate-off{
+  0%{
+    margin-top: -4px;
+    rotate: -45deg;
+    background-color: black;
+  }
+  100%{
+    margin-top: 4px;
+  }
+}
+
+.show{
+  animation: return 1.5s ease-out;
+}
+
+@keyframes return{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* link animations */
+.link{
+  position: relative;
+  padding: 10px;
+}
+
+.link::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: white;
+}
+
+.link:hover::before{
+  animation: slideOut 0.6s ease-in-out forwards;
+}
+
+.footer-link{
+  position: relative;
+  padding: 5px 0px;
+}
+
+.footer-link::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: red;
+}
+
+.footer-link:hover::before{
+  animation: slideOut 0.6s ease-in-out forwards;
+}
+
+@keyframes slideOut{
+  from{
+    width: 0%;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+/* bgImg cover */
 .img-cover {
   position: absolute;
   width: 100%;

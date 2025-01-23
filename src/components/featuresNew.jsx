@@ -1,25 +1,26 @@
 // src/components/Features.js
 import React from "react";
-import car from "../assets/images/car.jpg";
+import car6 from "../assets/images/car6.jpg";
 import car3 from "../assets/images/car3.jpg";
+import car5 from '../assets/images/car5.jpg';
 
 function FeaturesNew() {
   const features = [
     {
       title: "Wide Selection of Vehicles",
-      frontImage: `url(${car})`,
+      frontImage: `url(${car3})`,
       backContent:
         "Choose from a variety of new and pre-owned vehicles to suit your needs.",
     },
     {
       title: "Flexible Financing Options",
-      frontImage: `url(${car3})`,
+      frontImage: `url(${car5})`,
       backContent:
         "Affordable rates and terms tailored to your financial situation.",
     },
     {
       title: "Certified Service Center",
-      frontImage: `url(${car})`,
+      frontImage: `url(${car6})`,
       backContent:
         "Skilled technicians ensure your vehicle stays in top condition.",
     },
@@ -45,7 +46,7 @@ function FeaturesNew() {
               </div>
               {/* Back Side */}
               <div className="flip-card-back bg-red-600 text-white flex items-center justify-center p-4">
-                <p>{feature.backContent}</p>
+                <p className="text-xl">{feature.backContent}</p>
               </div>
             </div>
           </div>

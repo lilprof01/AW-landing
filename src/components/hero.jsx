@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import car2 from '../assets/images/car2.jpg';
+import car3 from '../assets/images/car3.jpg';
+import car4 from '../assets/images/car4.jpg';
+import car5 from '../assets/images/car5.jpg';
+import car6 from '../assets/images/car6.jpg';
 
 function HeroSection() {
+  const bgImg = [
+    `url(${car2})`,
+    `url(${car3})`,
+    `url(${car4})`,
+    `url(${car5})`,
+    `url(${car6})`,
+  ]
+  const [bg, setBg] = useState(bgImg[3]);
+
+  useEffect (() => {
+    const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * bgImg.length);
+      setBg(bgImg[randomIndex]);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [bgImg]);
+
+
   return (
-    <section className="flex flex-col align-middle items-center justify-center h-screen mt-12 img text-white text-center py-20">
+    <section style={{
+      backgroundImage: bg,
+    }} className={`flex flex-col align-middle items-center justify-center h-screen mt-12 img text-white text-center py-20`}>
       <div className="img-cover"></div>
       <h1 className="z-10 text-4xl md:text-6xl font-bold mb-6">
         Welcome to AutoWorld

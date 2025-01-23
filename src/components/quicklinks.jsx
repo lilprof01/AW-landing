@@ -32,7 +32,7 @@ function QuickLinks() {
           <ul className="space-y-2">
             {links.map((link, index) => (
               <li key={index}>
-                <a href={link.href} className="hover:underline text-red-700 text-sm sm:text-base">{link.label}</a>
+                <a href={link.href} className="footer-link text-red-700 text-sm sm:text-base">{link.label}</a>
               </li>
             ))}
           </ul>
@@ -42,7 +42,7 @@ function QuickLinks() {
           <ul className="space-y-2">
             {socials.map((social, index) => (
               <li key={index}>
-                <a href={social.href} target="_blank" rel="noopener noreferrer" className="hover:underline text-red-700 text-sm sm:text-base">
+                <a href={social.href} target="_blank" rel="noopener noreferrer" className="footer-link text-red-700 text-sm sm:text-base">
                   {social.icon} {social.label}
                 </a>
               </li>
